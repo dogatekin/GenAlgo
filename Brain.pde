@@ -24,4 +24,19 @@ class Brain {
    boolean hasDirections() {
      return size > step;
    }
+   
+   Brain clone() {
+     Brain clone = new Brain(size);
+     arrayCopy(directions, clone.directions);
+     return clone;
+   }
+   
+   void mutate(float mutationRate) {
+     for(int i = 0; i < directions.length; i++) {
+       if(random(1) < mutationRate) {
+         float randomAngle = random(2*PI);
+         directions[i] = PVector.fromAngle(randomAngle);
+       }
+     }
+  }
 }

@@ -10,7 +10,7 @@ class Goal {
   }
   
   void show() {
-    fill(255,0,0);
+    fill(255,128,0);
     ellipse(pos.x,pos.y,d,d);
   }
 }
