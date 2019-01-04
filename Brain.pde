@@ -31,6 +31,7 @@ class Brain {
      return clone;
    }
    
+   // Randomize a fraction of the directions according to the mutation rate
    void mutate(float mutationRate) {
      for(int i = 0; i < directions.length; i++) {
        if(random(1) < mutationRate) {

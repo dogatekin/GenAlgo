@@ -88,7 +88,7 @@ class Dot {
       if(pos.x > obs.x && pos.x < obs.x + obs.width && 
            pos.y > obs.y && pos.y < obs.y + obs.height) {
          return true;
-       }  
+      }  
     }
     
     return false;
@@ -96,7 +96,7 @@ class Dot {
   
   void calculateFitness(Goal goal) {
     if(reachedGoal) {
-      fitness = 1.0/16.0 + 10000.0/(float)pow(brain.step,2);
+      fitness = 1.0/16.0 + 1000.0/(float)pow(brain.step,2);
     }
     else {
       float distToGoal = pos.dist(goal.pos); 

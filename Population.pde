@@ -65,10 +65,12 @@ class Population {
       newGeneration[i] = parent.giveBirth();
     }
     
-    dots = newGeneration.clone();
+    dots = newGeneration;
     gen++;
   }
   
+  // Probability of being selected as a parent is linearly proportional to fitness
+  // e.g. a dot with twice the fitness of another dot is twice as likely to be a parent
   Dot selectParent() {
     float rand = random(fitnessSum);
     
@@ -96,10 +98,11 @@ class Population {
       }
     }
 
-    //if this dot reached the goal then reset the minimum number of steps it takes to get to the goal
+    // if this dot reached the goal then update the minimum number of steps it takes to get to the goal
+    // we don't want dots to live longer than this number because they won't improve the result
     if (dots[bestDot].reachedGoal(goal)) {
       minStep = dots[bestDot].brain.step;
-      println("Generation:", gen, "Step:", minStep);
+      // println("Generation:", gen, "Step:", minStep);
     }
   }
 }
