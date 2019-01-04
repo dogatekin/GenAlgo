@@ -5,8 +5,8 @@ Obstacle[] obstacles;
 int populationSize = 500;
 int goalDiameter = 20;
 int dotDiameter = 4;
-int brainSize = 600;
-float mutationRate = 0.2;
+int brainSize = 500;
+float mutationRate = 0.15;
 
 void setup() {
   size(800,800);
