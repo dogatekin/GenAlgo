@@ -3,4 +3,4 @@ Simple genetic algorithm example made with the help of a tutorial by YouTuber [C
 
 Made in Processing 3.
 
-![evolving.gif]
+![Demo](evolving.gif)
